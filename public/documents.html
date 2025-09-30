@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athena - Document Intelligence</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#113c92',
+              'background-light': '#f6f6f8',
+              'background-dark': '#111621',
+            },
+            fontFamily: {
+              display: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-screen w-full">
+<div class="flex flex-1 flex-col overflow-hidden">
+<header class="flex h-16 shrink-0 items-center justify-between border-b border-gray-200/10 dark:border-gray-700/50 px-6">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Athena</h1>
+</div>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="/login.html">Login</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="/documents.html">Documents</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="/upload.html">Upload</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="/search.html">Search</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="/document.html">Document</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="/chat.html">Chat</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="h-10 w-64 rounded-lg border-gray-200/20 bg-gray-50 dark:bg-background-dark/50 pl-10 pr-4 text-sm text-gray-800 dark:text-gray-200 focus:border-primary focus:ring-primary" placeholder="Search" type="search"/>
+</div>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSASK-RoJfg1K0SBavpcBasGZK6AqpcBOmizjzycjSL-HGABJzyDweXvaolLXH-EfLHyNMcCEzMwNEjebfpULQ25TJhDqe5WoXVgA1CZNspPD6QITT7vtJJqYcHqS4BBS009ymEnfO8Mm2k-EwCy9e8GztpX60G9BPzJ4HORCLz0gJeoF3DT8ZfccFKMMZmaGHJSpDUqp3jDfUxsU4WeoO6RU_50wBMisvHrOAejByWl35qnXYmJlnynQtgisFseO57t0pr0pom-s");'></div>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<div class="flex flex-1 flex-col overflow-y-auto p-6 @container">
+<div class="mb-6 flex items-center justify-between">
+<div>
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Documents</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400">Manage your documents and collections</p>
+</div>
+</div>
+<div class="mb-4 flex flex-col gap-4 @[640px]:flex-row @[640px]:items-center @[640px]:justify-between">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="h-12 w-full rounded-lg border-gray-200/20 bg-gray-50 dark:bg-background-dark/50 pl-10 pr-4 text-sm text-gray-800 dark:text-gray-200 focus:border-primary focus:ring-primary" placeholder="Search documents..." type="search"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex h-10 items-center gap-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 px-4 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span>Type</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 px-4 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span>Access Level</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="mb-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50">
+<span class="material-symbols-outlined text-xl">lock</span>
+</button>
+<button class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50">
+<span class="material-symbols-outlined text-xl">replay</span>
+</button>
+</div>
+<button class="flex h-10 items-center gap-2 rounded-lg bg-primary px-4 text-sm font-bold text-white">
+<span class="material-symbols-outlined">add_box</span>
+<span>New Document</span>
+</button>
+</div>
+<div class="overflow-x-auto rounded-lg border border-gray-200/10 dark:border-gray-700/50">
+<table class="min-w-full divide-y divide-gray-200/10 dark:divide-gray-700/50">
+<thead class="bg-gray-50 dark:bg-gray-800/20">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400" scope="col">Name</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400" scope="col">Type</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400" scope="col">Size</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400" scope="col">Upload Date</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400" scope="col">Access Level</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200/10 dark:divide-gray-700/50 bg-background-light dark:bg-background-dark">
+<tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/20">
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Project_Proposal_v3.pdf</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">PDF</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2.5 MB</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2023-08-15</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded bg-green-100/50 dark:bg-green-900/30 px-2 py-1 text-xs font-medium text-green-800 dark:text-green-300">Public</span>
+</td>
+</tr>
+<tr class="bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20">
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Financial_Report_Q2.docx</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">DOCX</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">1.8 MB</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2023-08-10</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded bg-red-100/50 dark:bg-red-900/30 px-2 py-1 text-xs font-medium text-red-800 dark:text-red-300">Private</span>
+</td>
+</tr>
+<tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/20">
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Meeting_Notes.txt</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">TXT</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">500 KB</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2023-08-05</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded bg-yellow-100/50 dark:bg-yellow-900/30 px-2 py-1 text-xs font-medium text-yellow-800 dark:text-yellow-300">Restricted</span>
+</td>
+</tr>
+<tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/20">
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Onboarding_Guide_v2.pdf</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">PDF</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">3.2 MB</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2023-07-20</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded bg-green-100/50 dark:bg-green-900/30 px-2 py-1 text-xs font-medium text-green-800 dark:text-green-300">Public</span>
+</td>
+</tr>
+<tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/20">
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Legal_Contract.docx</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">DOCX</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2.1 MB</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2023-07-15</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded bg-red-100/50 dark:bg-red-900/30 px-2 py-1 text-xs font-medium text-red-800 dark:text-red-300">Private</span>
+</td>
+</tr>
+<tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/20">
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">Raw_Data_Export.txt</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">TXT</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">750 KB</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500 dark:text-gray-400">2023-07-10</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded bg-yellow-100/50 dark:bg-yellow-900/30 px-2 py-1 text-xs font-medium text-yellow-800 dark:text-yellow-300">Restricted</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<p class="text-sm text-gray-500 dark:text-gray-400">Showing 1 to 6 of 24 documents</p>
+<div class="flex items-center gap-2">
+<button class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 disabled:opacity-50" disabled=""><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+</div>
+<aside class="hidden w-96 flex-col border-l border-gray-200/10 dark:border-gray-700/50 bg-background-light dark:bg-background-dark/30 p-6 xl:flex">
+<h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Preview</h3>
+<div class="mb-6 aspect-[4/3] w-full rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByaLebShdAZSnbHbs1oRp8uWpn5Q0LTnKyxqY79wU0e_4qgXQN1fqRF2aSUy__VpaIv6gZGlxyYiBeP99299Rx-BaOfKdg2v7chLRCkrkFa3b1HfCiE1K6XucmGSbeblGa7oqtji4Taq9i36vHt6j07IxtLIK1pZV-XCexDpa8kSWFj4ih_iEoejNs4txo2NnN58rLhva45EJsbxO2ZTzpFAGU6mKJuXCHvsCCMJeU-Nzo3ua137mS9wJ0lIhW0XidBdU6fALXNXg");'></div>
+<h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Metadata</h3>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300" for="name">Name</label>
+<input class="mt-1 block w-full rounded-lg border-gray-200/20 bg-gray-50 dark:bg-background-dark/50 p-2.5 text-sm text-gray-800 dark:text-gray-200 focus:border-primary focus:ring-primary" id="name" type="text" value="Financial_Report_Q2.docx"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300" for="type">Type</label>
+<input class="mt-1 block w-full rounded-lg border-gray-200/20 bg-gray-100 dark:bg-background-dark/60 p-2.5 text-sm text-gray-500 dark:text-gray-400" disabled="" id="type" type="text" value="DOCX"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300" for="size">Size</label>
+<input class="mt-1 block w-full rounded-lg border-gray-200/20 bg-gray-100 dark:bg-background-dark/60 p-2.5 text-sm text-gray-500 dark:text-gray-400" disabled="" id="size" type="text" value="1.8 MB"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300" for="upload-date">Upload Date</label>
+<input class="mt-1 block w-full rounded-lg border-gray-200/20 bg-gray-100 dark:bg-background-dark/60 p-2.5 text-sm text-gray-500 dark:text-gray-400" disabled="" id="upload-date" type="text" value="2023-08-10"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-300" for="access-level">Access Level</label>
+<select class="mt-1 block w-full rounded-lg border-gray-200/20 bg-gray-50 dark:bg-background-dark/50 p-2.5 text-sm text-gray-800 dark:text-gray-200 focus:border-primary focus:ring-primary" id="access-level">
+<option>Public</option>
+<option selected="">Private</option>
+<option>Restricted</option>
+</select>
+</div>
+<div class="flex justify-end gap-2 pt-2">
+<button class="h-10 rounded-lg px-4 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-800" type="button">Cancel</button>
+<button class="h-10 rounded-lg bg-primary px-4 text-sm font-bold text-white" type="submit">Save Changes</button>
+</div>
+</form>
+</aside>
+</main>
+</div>
+</div>
+
+</body></html>

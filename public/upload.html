@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athena - Upload</title>
+    <script defer src="/flow.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="dark">
+    <header class="topbar">
+      <div class="brand"><span class="logo">🧠</span><span class="name">Athena</span></div>
+      <nav class="nav">
+        <a href="/login.html">Login</a>
+        <a class="active" href="/upload.html">Upload</a>
+        <a href="/search.html">Search</a>
+        <a href="/document.html">Document</a>
+        <a href="/chat.html">Chat</a>
+      </nav>
+      <div class="avatar"></div>
+    </header>
+    <main class="content" onload="">
+      <h2>Upload Documents</h2>
+      <div class="dropzone">Drag & drop files here or <button class="link">Browse Files</button></div>
+      <div class="queue">
+        <div class="progress"><span>intelligence_brief_alpha.pdf</span><div class="bar" style="--p:25%"></div><span>25%</span></div>
+        <div class="progress"><span>asset_image_2.png</span><div class="bar" style="--p:75%"></div><span>75%</span></div>
+        <div class="progress"><span>interview_recording.mp3</span><div class="bar" style="--p:100%"></div><span>Completed</span></div>
+      </div>
+      <div style="margin-top:16px;display:flex;justify-content:flex-end">
+        <a class="primary" href="/search.html" onclick="AthenaFlow.advanceTo('search')">Next</a>
+      </div>
+      <script>
+        AthenaFlow.requireStep('upload');
+      </script>
+    </main>
+  </body>
+  </html>
+
+

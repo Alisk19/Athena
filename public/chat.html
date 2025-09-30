@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athena Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#113c92",
+            "background-light": "#f6f6f8",
+            "background-dark": "#111621",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200/10 dark:border-gray-700/50 px-6 py-3 shrink-0">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<svg class="text-white" fill="none" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM12 4.5L19.5 8.5L12 12.5L4.5 8.5L12 4.5ZM4 9.8L12 14.2V19.5L4 15.2V9.8Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">Athena</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white" href="/documents.html">Documents</a>
+<a class="text-sm font-medium text-primary dark:text-white" href="/chat.html">Chat</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white" href="/login.html">Settings</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHyVC6GuFf9eJHmoAFgScJM5UsiF5ru7x3ZKM5B7QugWFBI4gqfmqShwm2m8fn5tp6oPa5aGCFjtK-GuM7fm4DF6UiRysN0ylnGE_ZzlGi6aaHKbcpNe7UQ1NqJyoJmOiYBBQRZoZ-UWITXAlYsxavD-xL4F-UM5D9pJdxgN3ci7z9Jiilr-rIFwv9Cj9zR-xHYv57Epqhdj0Ou-gyTpcJDRls-IWBBTOIMcFVk05rPSP77cZIpEBi4YqQQ5N4DzBdDBAkUJdWENk");'></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-4xl h-full flex flex-col bg-white/50 dark:bg-background-dark/50 rounded-xl border border-gray-200/20 dark:border-gray-700/60 shadow-lg">
+<div class="p-4 border-b border-gray-200/20 dark:border-gray-700/60">
+<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Chat with Athena</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400">Ask questions, upload documents, or use voice input.</p>
+</div>
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<div class="flex items-start gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZnjl7rN-FFzny-Aa7hy-DbqpWIFZbcWjBqtRe3k6UmfUgw88xovysSi3cT4oSiod6brahDRhPqmcBz3lfonkRNeyNCBexBzTd_A8Lvx3Ht181VDqIJ-UvpTE4f0gYqGk44J7pZMDLEHEM7g7vLtUqCPhAHzTtbL3chvipi0sBUaVKCIJ-gyYkQohPgFOHttefFtdOjKUVKNXOaAo676WgcI-HgHt4iBV714Qgb76BKOGmKglki-2gTRVH-0OJXZSNpu9g7d0SNxY");'></div>
+<div class="flex flex-col items-start">
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Athena</p>
+<div class="bg-gray-100 dark:bg-gray-800/50 p-3 rounded-lg rounded-tl-none max-w-md">
+<p class="text-sm text-gray-800 dark:text-gray-200">Hello! How can I assist you today?</p>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 justify-end">
+<div class="flex flex-col items-end">
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">You</p>
+<div class="bg-primary p-3 rounded-lg rounded-tr-none max-w-md">
+<p class="text-sm text-white">Hi Athena, I need help analyzing a document.</p>
+</div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADExx_INkdgDLmBkmpxiKCCQn9XhF0Ju636lve60jYDd-fDmkgvHVvwXsqokJBzcwJBWiAPWIoUTfSJpxLvdaAD37fgJ41IG7jA3xFrXl8_BDW5J5dMTLxWDfv1JcPWqtoIQNBjkv9OeDQbPoiQTWS5Wylssn0WdP0ll9WcCcsMNDSuxn3MZKGiCtC7FZ-7F92KIXTJTBvDegplF368Ll1YucrvTpdn76StkSpWMCBIoBxry4-SlkuOZloMNDtGSlVUQdAMzj06iI");'></div>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200/20 dark:border-gray-700/60 mt-auto">
+<div class="relative">
+<input class="w-full bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg py-3 pl-4 pr-32 text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" placeholder="Type your message here..." type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3">
+<button class="p-1.5 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white rounded-full" type="button">
+<span class="material-symbols-outlined text-xl">mic</span>
+</button>
+<button class="p-1.5 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white rounded-full" type="button">
+<span class="material-symbols-outlined text-xl">image</span>
+</button>
+<button class="p-1.5 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white rounded-full" type="button">
+<span class="material-symbols-outlined text-xl">attach_file</span>
+</button>
+<button class="ml-2 inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="submit">
+<span>Send</span>
+<span class="material-symbols-outlined text-lg ml-1 -mr-1">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

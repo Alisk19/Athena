@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athena - Home</title>
+    <script defer src="/flow.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="dark">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">🧠</span>
+        <span class="name">Athena</span>
+      </div>
+      <nav class="nav">
+        <a href="/login.html">Login</a>
+        <a href="/upload.html">Upload</a>
+        <a href="/search.html">Search</a>
+        <a href="/document.html">Document</a>
+        <a href="/chat.html">Chat</a>
+        <a class="active" href="/index.html">Home</a>
+      </nav>
+      <div class="avatar" title="Profile"></div>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <h1>Athena</h1>
+        <p class="muted">Document Intelligence and Search across your knowledge.</p>
+        <div class="cards">
+          <a class="card" href="/search.html"><span>Search</span></a>
+          <a class="card" href="/documents.html"><span>Documents</span></a>
+          <a class="card" href="/upload.html"><span>Upload</span></a>
+          <a class="card" href="/chat.html"><span>Chat</span></a>
+        </div>
+      </section>
+      <script>
+        // Immediately redirect Home to the currently unlocked step
+        AthenaFlow.redirectToCurrent();
+      </script>
+    </main>
+
+    <script src="/main.js" type="module"></script>
+  </body>
+  </html>
+
+

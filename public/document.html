@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athena - Document Intelligence</title>
+    <script defer src="/flow.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="dark">
+    <header class="topbar">
+      <div class="brand"><span class="logo">🧠</span><span class="name">Athena</span></div>
+      <nav class="nav">
+        <a href="/login.html">Login</a>
+        <a href="/upload.html">Upload</a>
+        <a href="/search.html">Search</a>
+        <a class="active" href="/document.html">Document</a>
+        <a href="/chat.html">Chat</a>
+        <a href="/index.html">Home</a>
+      </nav>
+      <div class="avatar"></div>
+    </header>
+    <main class="content doc-intel">
+      <section class="viewer">
+        <div class="tabs">
+          <button class="active">Document Viewer</button>
+          <button>Image Viewer</button>
+          <button>Audio Player</button>
+          <button>Citation Pathway</button>
+        </div>
+        <div class="searchbar"><input placeholder="Search within document..."/></div>
+        <div class="canvas large"></div>
+        <p class="muted small">This document intelligence system provides a comprehensive view with PDF/DOCX viewer, image viewer, audio transcript navigation, and cross-reference visualization.</p>
+      </section>
+      <aside class="related">
+        <h3>Related Content</h3>
+        <div class="related-list">
+          <a href="#" class="related-item"><div class="thumb sm"></div><div><div class="small muted">DOCUMENT</div><div class="title">The Impact of AI on Society</div></div></a>
+          <a href="#" class="related-item"><div class="thumb sm"></div><div><div class="small muted">ARTICLE</div><div class="title">AI Ethics: Navigating the Future</div></div></a>
+          <a href="#" class="related-item"><div class="thumb sm"></div><div><div class="small muted">REPORT</div><div class="title">AI in Government</div></div></a>
+        </div>
+        <h3>Cross-Reference Network</h3>
+        <div class="canvas"></div>
+        <div style="margin-top:16px;display:flex;justify-content:flex-end">
+          <a class="primary" href="/chat.html" onclick="AthenaFlow.advanceTo('chat')">Next: Chat ▷</a>
+        </div>
+      </aside>
+      <script>
+        AthenaFlow.requireStep('document');
+      </script>
+    </main>
+  </body>
+  </html>
+
+

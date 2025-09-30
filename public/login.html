@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athena - Login</title>
+    <script defer src="/flow.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="dark center hide-nav">
+    <header class="topbar">
+      <div class="brand"><span class="logo">🧠</span><span class="name">Athena</span></div>
+      <nav class="nav">
+        <a class="active" href="/login.html">Login</a>
+        <a href="/upload.html">Upload</a>
+        <a href="/search.html">Search</a>
+        <a href="/document.html">Document</a>
+        <a href="/chat.html">Chat</a>
+        <a href="/index.html">Home</a>
+      </nav>
+      <div class="avatar"></div>
+    </header>
+    <main class="content narrow">
+      <form class="panel" onsubmit="event.preventDefault(); AthenaFlow.advanceTo('upload'); window.location='/upload.html'">
+        <h2>Log In</h2>
+        <label>Username or Email<input type="text" required /></label>
+        <label>Password<input type="password" required /></label>
+        <label class="row"><input type="checkbox"/> Remember me <a class="link" href="#" style="margin-left:auto">Forgot password?</a></label>
+        <button class="primary" type="submit">Log In</button>
+        <div class="muted small" style="margin-top:8px">Access Level: Administrator</div>
+      </form>
+    </main>
+  </body>
+  </html>
+
+

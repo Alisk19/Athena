@@ -1,0 +1,17 @@
+{
+  "name": "athena-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "set NODE_ENV=production && node server.js",
+    "lint": "echo 'no lint configured'"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "serve-static": "^1.15.0"
+  }
+}
+
